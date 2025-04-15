@@ -1,117 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>CruzLand - Landscaping Services</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CruzLand Landscaping</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-body {
-font-family: Georgia, serif;
-background-image: url('background.png');
-background-size: cover;
-background-attachment: fixed;
-background-position: center;
-color: #3a3a3a;
+* {
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
-
+html, body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: url('background.png') no-repeat center center fixed;
+background-size: cover;
+color: #333;
+}
 header {
-background-color: rgba(46, 125, 50, 0.85);
+text-align: center;
+padding: 30px 15px 15px;
+background: rgba(255, 255, 255, 0.9);
+}
+header h1 {
+font-size: 2.2rem;
+margin-bottom: 10px;
+}
+header p {
+font-style: italic;
+color: #555;
+}
+nav {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+margin: 20px;
+}
+nav a {
+text-decoration: none;
+background: #4CAF50;
+color: white;
+padding: 10px 18px;
+border-radius: 25px;
+transition: background 0.3s ease;
+}
+nav a:hover {
+background: #45a049;
+}
+section {
+background: rgba(178, 232, 178, 0.8);
+padding: 30px 20px;
+margin: 20px auto;
+max-width: 1000px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+from {opacity: 0; transform: translateY(20px);}
+to {opacity: 1; transform: translateY(0);}
+}
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+.card {
+background: #f5f5f5;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card i {
+font-size: 2rem;
+color: #4CAF50;
+margin-bottom: 10px;
+}
+footer {
+background: rgba(0,0,0,0.7);
 color: white;
 text-align: center;
-padding: 40px 20px;
+padding: 20px;
 }
-
-section {
-background-color: rgba(255, 255, 255, 0.9);
-padding: 30px;
-max-width: 800px;
-margin: 30px auto;
-border-radius: 12px;
-box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
-
-h2 {
-color: #2e7d32;
-}
-
-img {
-margin: 10px;
+iframe {
+width: 100%;
+height: 300px;
+border: 0;
 border-radius: 8px;
-box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
-form input, form textarea {
+input, textarea, button {
 width: 100%;
 padding: 10px;
-margin-top: 6px;
-margin-bottom: 16px;
+margin-top: 10px;
+border-radius: 5px;
 border: 1px solid #ccc;
-border-radius: 6px;
-font-family: inherit;
 }
-
-form input[type="submit"] {
-background-color: #6d4c41;
+button {
+background: #4CAF50;
 color: white;
 border: none;
 cursor: pointer;
+transition: background 0.3s ease;
+}
+button:hover {
+background: #45a049;
+}
+@media (max-width: 768px) {
+header h1 {
+font-size: 1.8rem;
 }
 
-form input[type="submit"]:hover {
-background-color: #5d4037;
+nav {
+flex-direction: column;
+align-items: center;
 }
 
-footer {
-background-color: rgba(255, 255, 255, 0.85);
+nav a {
+width: 100%;
 text-align: center;
-padding: 20px;
-font-size: 14px;
+padding: 12px;
 }
 
-footer a {
-color: #2e7d32;
-text-decoration: none;
+.cards {
+grid-template-columns: 1fr;
 }
+
+section {
+padding: 20px 15px;
+margin: 15px 10px;
+}
+
+input, textarea, button {
+font-size: 1rem;
+}
+
+iframe {
+height: 250px;
+}
+}
+#services .card:nth-child(2) {
+background-image: url('treeser.jpg');
+background-size: cover;
+background-position: center;
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#services .card:nth-child(1) {
+background-image: url('land.jpeg');
+background-size: cover;
+background-position: center;
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}   
+#services .card:nth-child(3) {
+background-image: url('outdoor.jpeg');
+background-size: cover;
+background-position: center;
+color: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}    
 </style>
 </head>
 <body>
+
 <header>
-<h1>CruzLand</h1>
-<p>Professional landscaping, tree cutting, and rustic outdoor design</p>
-<p><strong>Call us: <a href="tel:2149341770" style="color: white; text-decoration: underline;">214-934-1770</a></strong></p>
+<h1>CruzLand </h1>
+<p>Professional Landscaping, Tree Services, and Outdoor Design in DFW</p>
 </header>
 
-<section>
+<nav>
+<a href="#about"><i class="fas fa-leaf"></i> About</a>
+<a href="#services"><i class="fas fa-tree"></i> Services</a>
+<a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+<a href="#reviews"><i class="fas fa-star"></i> Reviews</a>
+<a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<section id="about">
 <h2>About Us</h2>
-<p>At CruzLand, we offer professional landscaping services, tree removal, and rustic yard design. We are passionate about making your outdoor space feel like a peaceful retreat in nature.</p>
+<p>At CruzLand, we specialize in transforming outdoor spaces into beautiful, functional landscapes. We take pride in providing top-quality service with a personal touch across the Dallas-Fort Worth area. Let us take care of your landscape—so you can enjoy it.</p>
 </section>
 
-<section>
-<h2>Our Work</h2>
-<img src="photo1.jpg" alt="Project 1" width="300">
-<img src="photo2.jpg" alt="Project 2" width="300">
+<section id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">
+<i class="fas fa-seedling"></i>
+<h3>Landscaping</h3>
+<p>Full service design and maintenance to create stunning outdoor spaces.</p>
+</div>
+<div class="card">
+<i class="fas fa-axe"></i>
+<h3>Tree Services</h3>
+<p>Tree trimming, removal, and care with safety and professionalism.</p>
+</div>
+<div class="card">
+<i class="fas fa-mountain"></i>
+<h3>Outdoor Projects</h3>
+<p>Custom hardscaping, patios, stone paths, and more.</p>
+</div>
+</div>
 </section>
 
-<section>
+<section id="gallery">
+<h2>Gallery</h2>
+<p>Insert your project photos here.</p>
+</section>
+
+<section id="reviews">
+<h2>Leave a Review</h2>
+<p>Let us know how we did! You can leave a review on our <a href="#">Google Business Profile</a>.</p>
+</section>
+
+<section id="contact">
 <h2>Contact Us</h2>
+<p>Phone: 214-934-1770</p>
+<p>Email: cruzlandfw@gmail.com</p>
 <form action="https://formspree.io/f/mkgjyand" method="POST">
-<label for="name">Name:</label>
-<input type="text" id="name" name="name">
-
-<label for="email">Email:</label>
-<input type="email" id="email" name="email">
-
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="4"></textarea>
-
-<input type="submit" value="Send Message">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
 </form>
 </section>
 
+<section id="map">
+<h2>Our Location</h2>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.542276198232!2d-96.9489!3d32.814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMzLCsDQ4JzUwLjQiTiA5NsKwNTYnNTYuMiJX!5e0!3m2!1sen!2sus!4v0000000000"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</section>
+
 <footer>
-<p>Call us: <a href="tel:2149341770">214-934-1770</a> | Follow us on <a href="https://www.facebook.com/share/1BAnxgwkYX/?mibextid=wwXlfr" target="_blank">cruzland</a></p>
-<p>&copy; 2025 CruzLand. All rights reserved.</p>
+<p>&copy; 2025 CruzLand Landscaping. All rights reserved.</p>
+<p>
+<a href="http//www.facebook.com/cruzland" target="_blank style="color: #fff;">
+<i class="fab fa-facebook"></i> Follow us on  Facebook
+</a>
+</p>
 </footer>
+
 </body>
 </html>
