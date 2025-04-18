@@ -140,7 +140,7 @@ iframe {
 height: 250px;
 }
 }
-#services .card:nth-child(2) {
+#services .cards a:nth-child(2) .card {
 background-image: url('treeser.jpg');
 background-size: cover;
 background-position: center;
@@ -156,7 +156,7 @@ justify-content: center;
 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-#services .card:nth-child(1) {
+#services .cards a:nth-child(1) .card {
 background-image: url('land.jpeg');
 background-size: cover;
 background-position: center;
@@ -171,7 +171,7 @@ flex-direction: column;
 justify-content: center;
 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }   
-#services .card:nth-child(3) {
+#services .cards a:nth-child(3) .card {
 background-image: url('outdoor.jpeg');
 background-size: cover;
 background-position: center;
@@ -211,21 +211,27 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 <section id="services">
 <h2>Our Services</h2>
 <div class="cards">
+<a href="landscaping.html" style="text-decoration: none; color: inherit;">
 <div class="card">
 <i class="fas fa-seedling"></i>
 <h3>Landscaping</h3>
 <p>Full service design and maintenance to create stunning outdoor spaces.</p>
 </div>
+</a>
+<a href="tree-services.html" style="text-decoration: none; color: inherit;">
 <div class="card">
 <i class="fas fa-axe"></i>
 <h3>Tree Services</h3>
 <p>Tree trimming, removal, and care with safety and professionalism.</p>
 </div>
+</a>
+<a href="outdoors.html" style="text-decoration: none; color: inherit;">
 <div class="card">
 <i class="fas fa-mountain"></i>
 <h3>Outdoor Projects</h3>
 <p>Custom hardscaping, patios, stone paths, and more.</p>
 </div>
+</a>
 </div>
 </section>
 
@@ -236,7 +242,7 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
 <section id="reviews">
 <h2>Leave a Review</h2>
-<p>Let us know how we did! You can leave a review on our <a href="#">Google Business Profile</a>.</p>
+<p>Let us know how we did! You can leave a review on our <a href="#">CruzLand</a>.</p>
 </section>
 
 <section id="contact">
