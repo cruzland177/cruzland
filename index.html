@@ -37,6 +37,12 @@ header p {
 font-style: italic;
 color: #555;
 }
+header video {
+ display: block;
+ max-width: 90%;
+ height: auto;
+ margin: 20px auto;
+}
 nav {
 display: flex;
 justify-content: center;
@@ -191,9 +197,7 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
 <header>
 <h1>CruzLand</h1>
-
-<!-- Aquí insertamos el video del logo SIN botones -->
-<video autoplay muted loop>
+<video autoplay muted loop style="max-width: 100%; margin: 20px auto; display: block; border: none; width: auto; height: auto;">
 <source src="logo.mp4" type="video/mp4"> <style="max-width: 150px; margin: 20px auto; display: block;"></video>
 
 <p>Professional Landscaping, Tree Services, and Outdoor Design in DFW</p>
@@ -252,7 +256,6 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 <section id="contact">
 <h2>Contact Us</h2>
 <p>Phone: 214-934-1770</p>
-<p>Email: cruzlandfw@gmail.com</p>
 <form id="contact-form">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
