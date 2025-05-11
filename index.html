@@ -4,7 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CruzLand Landscaping</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
 <style>
 * {
 margin: 0;
@@ -20,7 +24,6 @@ text-align: center;
 }
 header {
 background: rgba(0, 0, 0);
-padding: 0;
 min-height: 100vh;
 display: flex;
 flex-direction: column;
@@ -157,38 +160,23 @@ footer a:hover {
 transform: scale(1.2);
 filter: brightness(1.3);
 }
-#services .cards a:nth-child(1) .card {
-background-image: url('land.jpeg');
-background-size: cover;
-background-position: center;
-color: white;
-height: 250px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+/* Swiper custom style */
+.swiper {
+width: 100%;
+padding: 20px 0;
 }
-#services .cards a:nth-child(2) .card {
-background-image: url('treeser.jpg');
-background-size: cover;
-background-position: center;
-color: white;
-height: 250px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.swiper-slide img {
+height: 200px;
+border-radius: 8px;
+transition: transform 0.3s;
 }
-#services .cards a:nth-child(3) .card {
-background-image: url('outdoor.jpeg');
-background-size: cover;
-background-position: center;
-color: white;
-height: 250px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.swiper-slide img:hover {
+transform: scale(1.05);
+}
+.swiper-slide {
+  width: auto !important;
+  margin-right: 0 !important;
 }
 </style>
 </head>
@@ -208,33 +196,34 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
 </nav>
 </header>
+
 <section id="about">
 <h2>About Us</h2>
-<p>At CruzLand, we specialize in transforming outdoor spaces into beautiful, functional landscapes. We take pride in providing top-quality service with a personal touch across the Dallas-Fort Worth area. Let us take care of your landscape—so you can enjoy it.</p>
+<p>At CruzLand, we specialize in transforming outdoor spaces into beautiful, functional landscapes...</p>
 </section>
 
 <section id="services">
 <h2>Our Services</h2>
 <div class="cards">
 <a href="landscaping.html" style="text-decoration: none; color: inherit;">
-<div class="card">
+<div class="card" style="background-image: url('land.jpeg'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; flex-direction: column; justify-content: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
 <i class="fas fa-seedling"></i>
 <h3>Landscaping</h3>
-<p>Full service design and maintenance to create stunning outdoor spaces.</p>
+<p>Full service design and maintenance.</p>
 </div>
 </a>
 <a href="tree-services.html" style="text-decoration: none; color: inherit;">
-<div class="card">
+<div class="card" style="background-image: url('treeser.jpg'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; flex-direction: column; justify-content: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
 <i class="fas fa-axe"></i>
 <h3>Tree Services</h3>
-<p>Tree trimming, removal, and care with safety and professionalism.</p>
+<p>Trimming, removal, and care.</p>
 </div>
 </a>
 <a href="outdoors.html" style="text-decoration: none; color: inherit;">
-<div class="card">
+<div class="card" style="background-image: url('outdoor.jpeg'); background-size: cover; background-position: center; color: white; height: 250px; display: flex; flex-direction: column; justify-content: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
 <i class="fas fa-mountain"></i>
 <h3>Outdoor Projects</h3>
-<p>Custom hardscaping, patios, stone paths, and more.</p>
+<p>Custom hardscaping and patios.</p>
 </div>
 </a>
 </div>
@@ -242,13 +231,26 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
 <section id="gallery">
 <h2>Gallery</h2>
-<p>Insert your project photos here.</p>
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+<!-- Imágenes -->
+<div class="swiper-slide"><a href="IMG_2577.jpg" class="glightbox"><img src="IMG_2577.jpg" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2578.jpg" class="glightbox"><img src="IMG_2578.jpg" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2579.JPG" class="glightbox"><img src="IMG_2579.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2580.JPG" class="glightbox"><img src="IMG_2580.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2581.JPG" class="glightbox"><img src="IMG_2581.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2582.JPG" class="glightbox"><img src="IMG_2582.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2584.JPG" class="glightbox"><img src="IMG_2584.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2585.JPG" class="glightbox"><img src="IMG_2585.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2586.JPG" class="glightbox"><img src="IMG_2586.JPG" alt=""></a></div>
+<div class="swiper-slide"><a href="IMG_2587.JPG" class="glightbox"><img src="IMG_2587.JPG" alt=""></a></div>
+</div>
+</div>
 </section>
 
 <section id="reviews">
 <h2>Leave a Review</h2>
-<p>Let us know how we did! You can leave a review on our <a href="https://g.co/kgs/RjVcBth">CruzLand google business</a>
-</p>
+<p>Let us know how we did! <a href="https://g.co/kgs/RjVcBth">Our Reviews</a></p>
 </section>
 
 <section id="contact">
@@ -259,17 +261,58 @@ text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 <input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 <button type="submit">Send Message</button>
-<p id="thank-you-message" style="display:none; color: green; margin-top: 15px;">Thank you for contacting us! We'll get back to you soon.</p>
+<p id="thank-you-message" style="display:none; color: green; margin-top: 15px;">Thank you for contacting us!</p>
 </form>
 </section>
 
 <section id="map">
 <h2>Our Service Area</h2>
-<a href="https://www.google.com/maps/search/dallas-fort+worth/@32.9319623,-96.822755,10.77z?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
-target="_blank">
-<button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;"> View Our Area on Google Maps </button>
+<a href="https://www.google.com/maps/search/dallas-fort+worth/" target="_blank">
+<button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">
+View Our Area on Google Maps
+</button>
 </a>
 </section>
+
+<footer>
+<div class="footer-links">
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a> |
+<a href="accessibility.html">Accessibility</a>
+</div>
+<p style="margin: 10px 0; font-style: italic;">Follow us:</p>
+<a href="https://www.facebook.com/cruzland" target="_blank" style="color: #3b5998; margin: 0 10px; font-size: 18px;">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.instagram.com/cruzland" target="_blank" style="color: #e1306c; margin: 0 10px; font-size: 18px;">
+<i class="fab fa-instagram"></i>
+</a>
+<p>© 2005 CruzLand Landscaping. All rights reserved.</p>
+</footer>
+
+<!-- JS SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+const swiper = new Swiper(".mySwiper", {
+slidesPerView: "auto",
+spaceBetween: 0,
+loop: true,
+speed: 6000,
+autoplay: {
+delay: 0,
+disableOnInteraction: false,
+},
+freeMode: true,
+freeModeMomentum: false,
+});
+
+const lightbox = GLightbox({ selector: '.glightbox' });
+
+const swiperEl = document.querySelector('.swiper');
+swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+</script>
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
@@ -289,22 +332,6 @@ alert('There was an error. Please try again.');
 }
 });
 </script>
-
-<footer>
-<div class="footer-links">
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms of Service</a> |
-<a href="accessibility.html">Accessibility</a>
-</div>
-<p style="margin: 10px 0; font-style: italic;">Follow us:</p>
-<a href="https://www.facebook.com/cruzland" target="_blank" style="color: #3b5998; margin: 0 10px; font-size: 18px;">
-<i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://www.instagram.com/cruzland" target="_blank" style="color: #e1306c; margin: 0 10px; font-size: 18px;">
-<i class="fab fa-instagram"></i>
-</a>
-<p>© 2025 CruzLand Landscaping. All rights reserved.</p>
-</footer>
 
 </body>
 </html>
